@@ -1,7 +1,7 @@
 [
     {
         "task": "Last page not loading multiples of 8 loading",
-        "status": "working - index problem"
+        "status": "done - index problem"
     },
     {
         "task": "Telegraph if possible",
@@ -13,15 +13,15 @@
     },
     {
         "task": "Search auto delete",
-        "status": "cannot be done - bot cannot delete user's message"
+        "status": "already present"
     },
     {
         "task": "Restart button if possible",
-        "status": "refresh button already exists"
+        "status": "done - refresh button already exists"
     },
     {
         "task": "Search algorithm if one space extra not searching",
-        "status": "working - remove extra space from regex patter"
+        "status": "done - remove extra space from regex patter"
     },
     {
         "task": "File not not found replace by a predefined text and google search button",
@@ -29,15 +29,15 @@
     },
     {
         "task": "Ignore duplicate file",
-        "status": "working - remove duplicates from mongodb database"
+        "status": "done - remove duplicates from mongodb database"
     },
     {
         "task": "Arrange by season and episode and quality",
-        "status": "working - sort in ascending order of searhc results"
+        "status": "done - sort in ascending order of searhc results, quality is difficult"
     },
     {
         "task": "Logs from cmd",
-        "status": "working - simple mongo query and a new command"
+        "status": "done - simple mongo query and a new command"
     },
     {
         "task": "Uncompressed link showing up after long time",
