@@ -1,0 +1,46 @@
+[
+    {
+        "task": "Last page not loading multiples of 8 loading",
+        "status": "working - index problem"
+    },
+    {
+        "task": "Telegraph if possible",
+        "status": "Finding issues with implementation"
+    },
+    {
+        "task": "Auto delete telegraph",
+        "status": "Finding issues with implementation"
+    },
+    {
+        "task": "Search auto delete",
+        "status": "cannot be done - bot cannot delete user's message"
+    },
+    {
+        "task": "Restart button if possible",
+        "status": "refresh button already exists"
+    },
+    {
+        "task": "Search algorithm if one space extra not searching",
+        "status": "working - remove extra space from regex patter"
+    },
+    {
+        "task": "File not not found replace by a predefined text and google search button",
+        "status": "working - replace the no results found with a button for google search"
+    },
+    {
+        "task": "Ignore duplicate file",
+        "status": "working - remove duplicates from mongodb database"
+    },
+    {
+        "task": "Arrange by season and episode and quality",
+        "status": "working - sort in ascending order of searhc results"
+    },
+    {
+        "task": "Logs from cmd",
+        "status": "working - simple mongo query and a new command"
+    },
+    {
+        "task": "Uncompressed link showing up after long time",
+        "status": "bandwidth issue"
+    }
+]

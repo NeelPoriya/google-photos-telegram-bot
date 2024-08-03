@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "target": "es2022",
+        "module": "ESNext",
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "isolatedModules": true,
+        "moduleResolution": "node",
+        "lib": [
+            "ES2022",
+            "dom",
+            "es6",
+            "es5"
+        ],
+        "types": [
+            "node",
+            "mongoose"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
