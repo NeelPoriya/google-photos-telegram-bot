@@ -532,6 +532,7 @@ bot.onText(/\/search/, async (msg: Message) => {
   }, AUTO_DELETE_TIME);
 });
 
+
 bot.onText(/\/logs/, async (msg: Message) => {
   const moviesCount = await MediaItem.find().countDocuments();
   const successfulRequests = await MovieRequest.find({status: 'COMPLETED'}).countDocuments();
