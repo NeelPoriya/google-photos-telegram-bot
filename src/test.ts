@@ -103,7 +103,10 @@ const storeAllMediaItems = async () => {
 
 const removeMediaItems = async () => {
   try {
+    await MovieRequest.deleteMany({status: "PENDING"});
+    await MovieRequest.deleteMany({status: "IN_PROGRESS"});
     await MovieRequest.deleteMany({status: "FAILED"});
+
     await MediaItem.deleteMany({});
     logger.info("All media items removed");
   } catch (error) {
@@ -112,8 +115,6 @@ const removeMediaItems = async () => {
 };
 
 async function removeDuplicates() {
-  const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     // Step 1 & 2: Group by filename and keep the first document of each group
@@ -127,23 +128,19 @@ async function removeDuplicates() {
       {
         $replaceRoot: { newRoot: "$doc" }
       }
-    ], { session });
+    ]);
 
     // Assuming you want to replace the original collection with the deduplicated documents
     // Drop the original collection
-    await MediaItem.collection.drop({ session });
+    await MediaItem.collection.drop();
     
     // Insert the deduplicated documents back into the collection
-    await MediaItem.insertMany(groupedDocs, { session });
+    await MediaItem.insertMany(groupedDocs);
 
     // Commit the transaction
-    await session.commitTransaction();
     console.log("Duplicates removed successfully.");
   } catch (error) {
     console.error("An error occurred:", error);
-    await session.abortTransaction();
-  } finally {
-    session.endSession();
   }
 }
 

@@ -57,10 +57,6 @@ bot.onText(/\/search/, async (msg) => {
 });
 
 bot.on("message", async (msg) => {
-  console.log(msg.chat.id);
-})
-
-bot.on("message", async (msg) => {
   const chatId = msg.chat.id;
   const movieName = msg.text;
 
@@ -181,6 +177,10 @@ bot.setMyCommands([
     command: "/search",
     description: "Search for a movie",
   },
+  {
+    command: "/logs",
+    description: "Shows summary of movies list."
+  }
 ]);
 
 console.log("Telegram Bot Started");
